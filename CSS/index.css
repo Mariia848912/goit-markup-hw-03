@@ -26,14 +26,44 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+/* Обнулення дефолтных значень */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Контейнер для сторінки */
+.container {
+ 
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid green;
+  outline-offset: -2px;
+}
+/* Шапка сайту */
+.page-header {
+  background-color: var(--color-white-text-bg);
 }
 
-/* Шапка сайту */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
 
 .logo-header {
+  margin-right: 93px;
+
   color: var(--color-text-logo);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -46,7 +76,19 @@ body {
   color: var(--accent-color);
 }
 
+.site-nav {
+  display:flex;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -65,7 +107,19 @@ body {
   color: var(--accent-color);
 }
 
+.contact-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
 .contact-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -74,25 +128,34 @@ body {
 }
 
 /* Герой */
-.hero-title {
-  color: var(--color-white-text-bg);
+.hero {
   background-color: var(--color-bg);
+    text-align: center;
+}
+
+.hero-title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  color: var(--color-white-text-bg);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 .button {
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 216px;
   color: var(--color-white-text-bg);
   background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
   align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   border: none;
   font-family: inherit;
@@ -107,10 +170,15 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  padding: 50px;
+
 }
 
 /* Переваги */
 .advantage .title {
+  margin-bottom: 10px;
+  width: 270px;
+  
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -120,8 +188,22 @@ body {
 }
 .advantage .text {
   line-height: 1.71;
+  width: 270px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* Наша команда */
 .team .title {
   color: var(--title-text-color);
@@ -135,15 +217,27 @@ body {
   line-height: 1.19;
   text-align: center;
 }
+.team-page {
+  background-color: var(--color-button-bg);
+  margin-top: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+ 
+
+}
 
 /* Меін сторінки Портфоліо */
 .buttons-menu .button {
+  max-width: 130px;
+  min-width: 0;
+  border-radius: 4px;
+  min-height: 38px;
+  padding: 6px 22px;
   color: var(--title-text-color);
   background-color: var(--color-button-bg);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   border: none;
   font-family: inherit;
   cursor: pointer;
@@ -158,6 +252,8 @@ body {
   text-decoration: none;
 }
 .portfolio .title {
+  margin-top: 20px;
+  margin-bottom: 4px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
