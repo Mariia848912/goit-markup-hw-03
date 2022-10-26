@@ -344,7 +344,7 @@ margin-right: 0;
   /* justify-content: space-between; */
 }
 .work-list .item {
-  flex-basis: calc(100% / 3 - 60px);
+    flex-basis: calc((100% - 60px) / 3);
   /* width: 370px;   */ 
   /* аба так можливо розрахувати (100% * сумма маржинов в строке) / кол-во элементов в строке*/
   /* width: calc((100% - 60px) / 3);
