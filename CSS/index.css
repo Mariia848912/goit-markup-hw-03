@@ -52,11 +52,10 @@ img {
   outline-offset: -2px; */
 }
 /* Шапка сайту */
-/* .page-header {
+.page-header {
   border-bottom: 1px solid #ECECEC;
-} */
+}
 
-header {border-bottom: 1px solid #ECECEC;}
 .main-nav {
   display: flex;
   align-items: center;
@@ -310,9 +309,11 @@ margin-right: 0;
 .buttons-menu .button {
   max-width: 130px;
   min-width: 0;
-  border-radius: 4px;
   min-height: 38px;
   padding: 6px 22px;
+  border-radius: 4px;
+  
+  
 
   color: var(--title-text-color);
   background-color: var(--color-button-bg);
